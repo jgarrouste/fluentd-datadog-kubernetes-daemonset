@@ -40,6 +40,8 @@ RUN buildDeps="sudo make gcc g++ libc-dev ruby-dev libffi-dev<% case target when
     && gem install fluent-plugin-detect-exceptions -v 0.0.9 \
 <% case target when "elasticsearch"%>
     && gem install fluent-plugin-elasticsearch -v "<2" \
+<% when "datadog"%>
+    && gem install fluent-plugin-datadog \
 <% when "logentries"%>
     # && gem install fluent-plugin-logentries \
 <% when "loggly"%>

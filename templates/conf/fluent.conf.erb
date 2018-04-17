@@ -30,6 +30,15 @@
    disable_retry_limit
    num_threads 8
 </match>
+<%  when "datadog"%>
+<match **>
+  type datadog
+  id awesome_agent
+  api_key "#{ENV['FLUENT_DATADOG_APIKEY']}"
+  flush_interval "#{ENV['FLUENT_DATADOG_FLUSH_INTERVAL']}"
+  include_tag_key true
+  tag_key 'tag'
+</match>
 <%  when "logentries"%>
 <match **>
    type logentries
