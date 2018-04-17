@@ -18,7 +18,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: fluentd-datadog
-        image: jgarrouste/fluentd-kubernetes-daemonset:v0.12.33-datadog
+        image: jgarrouste/fluentd-datadog-kubernetes-daemonset:datadog
         env:
           - name:  FLUENT_DATADOG_APIKEY
             value: "xxxxxxxxxxxxxxxxxxxxxxxxx"
